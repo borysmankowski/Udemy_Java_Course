@@ -2,6 +2,8 @@ package com.company.interfaces.challenge;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
+import java.util.SortedMap;
 
 public class Player implements Saveable {
 
@@ -16,6 +18,7 @@ public class Player implements Saveable {
         this.strength = strength;
         this.weapon = "Sword";
     }
+
 
     @Override
     public List<String> write() {
@@ -38,6 +41,16 @@ public class Player implements Saveable {
             this.weapon = savedValues.get(3);
         }
     }
+
+    public static void saveObject(Saveable objectToSave) {
+        for (int i = 0; i < objectToSave.write().size(); i++) {
+            System.out.printf("Saving" + objectToSave.write().get(i) + " to storage device");
+        }
+    } // passing on the savable allows to use any object which implements this interface
+    // in the above method it's going over each object as its using .write() & saving the player
+    // .write() returns a list which we are then using to count the elements
+
+
 
     public String getName() {
         return name;
@@ -80,4 +93,6 @@ public class Player implements Saveable {
                 ", weapon='" + weapon + '\'' +
                 '}';
     }
+
+
 }
