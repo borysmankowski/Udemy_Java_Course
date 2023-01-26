@@ -19,6 +19,12 @@ public class Main {
         loadObject(tim);
         System.out.println(tim);
 
+        System.out.println();
+
+        Saveable warewolf = new Monster("Warewolf", 20,40);
+        System.out.println(warewolf);
+        saveObject(warewolf);
+
     }
 
     public static ArrayList<String> readValues() {
