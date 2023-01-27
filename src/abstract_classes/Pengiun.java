@@ -8,6 +8,7 @@ public class Pengiun extends Bird{
 
     @Override
     public void fly() {
+        super.fly();
         System.out.println("Im not very good at that lets go for a swim");
     }
 }
