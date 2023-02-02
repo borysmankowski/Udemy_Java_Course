@@ -1,4 +1,4 @@
-package abstract_classes;
+package abstract_classes.animals;
 
 public abstract class Bird extends Animal implements CanFly{
 

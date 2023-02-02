@@ -1,4 +1,4 @@
-package abstract_classes;
+package abstract_classes.animals;
 
 public class Pengiun extends Bird{
 
